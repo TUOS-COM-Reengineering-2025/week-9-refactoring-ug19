@@ -14,8 +14,8 @@ class CustomerManager:
     def add_purchase(self, name, purchase):
         self.add_customer(name, [purchase])
 
-    def add_purchases(self, name, purchases):
-        self.add_customer(name, purchases)
+  #  def add_purchases(self, name, purchases):
+   #     self.add_customer(name, purchases)
 
     def generate_report(self):
         for y, x in self.customers.items():
@@ -46,6 +46,7 @@ class CustomerManager:
             if purchase.get('weight', 0) > 20:
                 heavy_item = True
                 break
+
         if heavy_item:
             return 50
         else:
